@@ -205,9 +205,9 @@
   {
     "objectID": "content/01_journal/06_ml_dl.html",
     "href": "content/01_journal/06_ml_dl.html",
-    "title": "Data Visualization",
+    "title": "06 Deep Learning",
     "section": "",
-    "text": "Note\n\n\n\nYou can delete everything in here and start fresh."
+    "text": "IMPORTANT: You can delete everything in here and start fresh. You might want to start by not deleting anything above this line until you know what that stuff is doing.\nThis is an .Rmd file. It is plain text with special features. Any time you write just like this, it will be compiled to normal text in the website. If you put a # in front of your text, it will create a top level-header."
   },
   {
     "objectID": "raw_data/Chapter_1_Challenge.html",
@@ -257,5 +257,12 @@
     "title": "Session 6 - Challenge - Company Segmentation",
     "section": "Step 6 - Combine K-Means and UMAP",
     "text": "Step 6 - Combine K-Means and UMAP\nNext, we combine the K-Means clusters and the UMAP 2D representation\nWe’re going to import the correct results first (just in case you were not able to complete the last step).\n\nk_means_mapped_tbl &lt;- read_rds(\"k_means_mapped_tbl.rds\")\numap_results_tbl   &lt;- read_rds(\"umap_results_tbl.rds\")\n\nFirst, pull out the K-Means for 10 Centers. Use this since beyond this value the Scree Plot flattens. Have a look at the business case to recall how that works.\n\n# Get the k_means_obj from the 10th center\n\n# Store as k_means_obj\n\nNext, we’ll combine the clusters from the k_means_obj with the umap_results_tbl.\n\nBegin with the k_means_obj\nAugment the k_means_obj with the stock_date_matrix_tbl to get the clusters added to the end of the tibble\nSelect just the symbol and .cluster columns\nLeft join the result with the umap_results_tbl by the symbol column\nLeft join the result with the result of sp_500_index_tbl %&gt;% select(symbol, company, sector) by the symbol column.\nStore the output as umap_kmeans_results_tbl\n\n\n# Use your dplyr & broom skills to combine the k_means_obj with the umap_results_tbl\n\n\n# Output: umap_kmeans_results_tbl \n\nPlot the K-Means and UMAP results.\n\nBegin with the umap_kmeans_results_tbl\nUse ggplot() mapping V1, V2 and color = .cluster\nAdd the geom_point() geometry with alpha = 0.5\nApply colors as you desire (e.g. scale_color_manual(values = palette_light() %&gt;% rep(3)))\n\n\n# Visualize the combined K-Means and UMAP results\n\nCongratulations! You are done with the 1st challenge!"
+  },
+  {
+    "objectID": "content/01_journal/06_ml_dl.html#second-level-header",
+    "href": "content/01_journal/06_ml_dl.html#second-level-header",
+    "title": "06 Deep Learning",
+    "section": "\n1.1 Second level header",
+    "text": "1.1 Second level header\nYou can add more headers by adding more hashtags. These won’t be put into the table of contents\nthird level header\nHere’s an even lower level header"
   }
 ]
