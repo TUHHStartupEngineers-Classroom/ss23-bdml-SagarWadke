@@ -1,0 +1,18 @@
+{
+  "hash": "8462ab1a09145a87e49eac92ed20fcbe",
+  "result": {
+    "markdown": "---\ntitle: \"06 Deep Learning\"\nauthor: \"Sagar Wadke\"\n---\n\n\n\n\n**IMPORTANT:** You can delete everything in here and start fresh. You might want to start by not deleting anything above this line until you know what that stuff is doing.\n\nThis is an `.Rmd` file. It is plain text with special features. Any time you write just like this, it will be compiled to normal text in the website. If you put a \\# in front of your text, it will create a top level-header.\n\n# My first post\n\nLast compiled: 2023-06-12\n\nNotice that whatever you define as a top level header, automatically gets put into the table of contents bar on the left. \n\n## Second level header\n\nYou can add more headers by adding more hashtags. These won't be put into the table of contents\n\n### third level header\n\nHere's an even lower level header\n\n# My second post (note the order)\n\nLast compiled: 2023-06-12\n\nI'm writing this tutorial going from the top down. And, this is how it will be printed. So, notice the second post is second in the list. If you want your most recent post to be at the top, then make a new post starting at the top. If you want the oldest first, do, then keep adding to the bottom\n\n# Adding R stuff\n\nSo far this is just a blog where you can write in plain text and serve your writing to a webpage. One of the main purposes of this lab journal is to record your progress learning R. The reason I am asking you to use this process is because you can both make a website, and a lab journal, and learn R all in R-studio. This makes everything really convenient and in the same place. \n\nSo, let's say you are learning how to make a histogram in R. For example, maybe you want to sample 100 numbers from a normal distribution with mean = 0, and standard deviation = 1, and then you want to plot a histogram. You can do this right here by using an r code block, like this:\n\n\n::: {.cell hash='06_ml_dl_cache/html/unnamed-chunk-2_2d194426558f427e5537a21317fd28b3'}\n\n```{.r .cell-code}\nsamples <- rnorm(100, mean=0, sd=1)\nhist(samples)\n```\n\n::: {.cell-output-display}\n![](06_ml_dl_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\nWhen you knit this R Markdown document, you will see that the histogram is printed to the page, along with the R code. This document can be set up to hide the R code in the webpage, just delete the comment (hashtag) from the cold folding option in the yaml header up top. For purposes of letting yourself see the code, and me see the code, best to keep it the way that it is. You'll learn that all of these things and more can be customized in each R code block.",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../../site_libs/pagedtable-1.1/css/pagedtable.css\" rel=\"stylesheet\" />\r\n<script src=\"../../site_libs/pagedtable-1.1/js/pagedtable.js\"></script>\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
